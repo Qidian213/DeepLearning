@@ -12,7 +12,8 @@ class CrossEntropyLoss(nn.Module):
     def forward(self, inputs, labels):
         loss = self.ce_loss(inputs, labels)
         return loss
-        
+
+
 class CrossEntropyLabelSmooth(nn.Module):
     def __init__(self, num_classes = 7, epsilon=0.1):
         super(CrossEntropyLabelSmooth, self).__init__()
